@@ -40,25 +40,25 @@ public class Gambling
 			{
 				profit=daily_limit-100;
 				total=total+profit;
-				System.out.println("DAY "+day+" has Profit of :: "+profit);
+				System.out.println("DAY "+day+" has a Profit of :: "+profit);
 			}
 			else
 			{
 				lost=100-daily_limit;
 				total=total-lost;
-				System.out.println("DAY "+day+" has Loss of :: "+lost);
+				System.out.println("DAY "+day+" has a Loss of :: "+lost);
 			}
 			day++;
 		}
-		if(total>DAILY_LIMIT*MAX_DAYS)
+		if(total>(DAILY_LIMIT*MAX_DAYS))
 		{
 			profit=total-(DAILY_LIMIT*MAX_DAYS);
-			System.out.println("Month has a profit of: "+profit);
+			System.out.println("Month has a Profit of: "+profit);
 		}
-		else if(total<DAILY_LIMIT*MAX_DAYS)
+		else if(total<(DAILY_LIMIT*MAX_DAYS))
 		{
 			lost=(DAILY_LIMIT*MAX_DAYS)-total;
-			System.out.println("Month has a profit of: "+lost);
+			System.out.println("Month has a Loss of: "+lost);
 		}
 		else
 		{
