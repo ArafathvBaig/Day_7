@@ -5,7 +5,7 @@ public class Gambling
 	public static int DAILY_LIMIT=100;
 	public static int PER_GAME_LIMIT=1;
 	public static int WIN=1;
-	public static int loss=0;
+	public static int LOSS=0;
 	public static void main(String[] args) 
 	{
 		int check;
