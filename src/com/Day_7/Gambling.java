@@ -8,6 +8,8 @@ public class Gambling
 	public static final int WIN=1;
 	public static final int LOSS=0;
 	public static final int MAX_MONTHS=12;
+	public static final int MAX_PROFIT=50;
+	public static final int MAX_LOST=50;
 	public static void main(String[] args) 
 	{
 		int months=1;
@@ -51,6 +53,10 @@ public class Gambling
 					total=total+profit;
 					daysWon++;
 					System.out.println("DAY "+day+" has a Profit of :: "+profit);
+					if(profit==MAX_PROFIT)
+					{
+						System.out.println("Day "+day+" is a Luckiest Day.");
+					}
 				}
 				else
 				{
@@ -58,6 +64,10 @@ public class Gambling
 					total=total-lost;
 					daysLost++;
 					System.out.println("DAY "+day+" has a Loss of :: "+lost);
+					if(lost==MAX_LOST)
+					{
+						System.out.println("Day "+day+" is a UnLuckiest Day.");
+					}
 				}
 				day++;
 			}
