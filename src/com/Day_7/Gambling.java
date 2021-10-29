@@ -13,7 +13,8 @@ public class Gambling
 	public static void main(String[] args) 
 	{
 		int months=1;
-		while(months<=MAX_MONTHS)
+		int flag=0;
+		while((months<=MAX_MONTHS) && (flag==0))
 		{
 			System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 			System.out.println("$$$$$$$$$ Month::"+months+" $$$$$$$$$");
@@ -71,22 +72,25 @@ public class Gambling
 				}
 				day++;
 			}
+			System.out.println("No.of Days Won in Month "+months+" : "+daysWon);
+			System.out.println("No.of Days Lost in Month "+months+" : "+daysLost);
 			if(total>(DAILY_LIMIT*MAX_DAYS))
 			{
 				profit=total-(DAILY_LIMIT*MAX_DAYS);
 				System.out.println("Month "+months+" has a profit of: "+profit);
+				//flag=0;
 			}
 			else if(total<(DAILY_LIMIT*MAX_DAYS))
 			{
 				lost=(DAILY_LIMIT*MAX_DAYS)-total;
 				System.out.println("Month "+months+" has a Loss of: "+lost);
+				flag=1;
 			}
 			else
 			{
+				//flag=0;
 				System.out.println("Month "+months+" has No Profit or No Loss");
 			}
-			System.out.println("No.of Days Won in Month "+months+" : "+daysWon);
-			System.out.println("No.of Days Lost in Month "+months+" : "+daysLost);
 			months++;
 		}
 	}
